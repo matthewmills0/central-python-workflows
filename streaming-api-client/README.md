@@ -14,7 +14,7 @@ Upon running the script, if there are issues in decoding the output in human rea
 
 ### Validate WebSocket Key
 
-WebSocket key obtain from Aruba Central `Account Home -> Webhooks -> Streaming -> Key` expires every 7 days. The WebSocket key is renewed by Aruba Central internally. To obtain the renewed WebSocket key programmatically without having to visit the WebUI, a REST API endpoint is available. This API accepts a WebSocket key and validates it. It returns the same key if it is valid otherwise returns the renewed key.
+WebSocket key obtain from Aruba Central `Global -> Organization -> Platform Integration -> API Gateway -> Streaming -> Copy Streaming Key` expires every 7 days. The WebSocket key is renewed by Aruba Central internally. To obtain the renewed WebSocket key programmatically without having to visit the WebUI, a REST API endpoint is available. This API accepts a WebSocket key and validates it. It returns the same key if it is valid otherwise returns the renewed key.
 
 Please Note: This API endpoint does not refresh the WebSocket Key. It only fetches a renewed key from Aruba Central. When multiple API calls are made to the same endpoint, valid key will be returned all the time. It might be same as the provided key if the key is valid.
 
